@@ -10,17 +10,18 @@ void GetDairy() {
 	Date date;
 	Emotion emotion;
 
-	cout << "ë‚ ì§œ(YYYY MM DD): ";
+	cout << "³¯Â¥(YYYY MM DD): ";
 	cin >> date.year >> date.month >> date.day;
-	cout << "ë‚ ì”¨: ";
+	cout << "³¯¾¾: ";
 	cin >> wh;
-	cout << "ê°ì •(ê¸°ì¨:H, ì„¤ë ˜:J, ìŠ¬í””:S, í™”ë‚¨:A, ë¬´ë£Œ:B): ";
+	cout << "°¨Á¤(±â»Ý:H, ¼³·½:J, ½½ÇÄ:S, È­³²:A, ¹«·á:B): ";
 	cin >> em;
 	emotion.GetEmotion(em);
 
-	cout << "ì¼ê¸°ë¥¼ ìž…ë ¥í•˜ì„¸ìš”." << endl;
-	cin.getline(letter, 500, 'ë');
+	cout << "ÀÏ±â¸¦ ÀÔ·ÂÇÏ¼¼¿ä." << endl;
+	LoadQuest();
+	cin.getline(letter, 500, '³¡');
 
 	WriteTxt(date.year, date.month, date.day, letter);
-	
+
 }
